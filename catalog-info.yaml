@@ -2,12 +2,22 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: demo-service-001
-  description: demo
+  description: First service for backstage demo
+  tags:
+    - dotnet
+    - data
+  links:
+    - url: https://github.com/0GiS0/tour-of-heroes-dotnet-api
+      title: Source Code
+      icon: github
   annotations:
-    backstage.io/owner: team A
+    # this could also be `url:<url>` if the documentation isn't in the same location
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: service
   lifecycle: production
-  dependsOn:
-    - component: demo-service-002
-    - component: api-demo-001
+  owner: borixcr
+  system: BKSTG-DEMO
+  dependsOn: ['resource:bkstg-demo-db','resource:demo-service-002']
+  
+  
