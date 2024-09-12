@@ -18,7 +18,7 @@ spec:
   lifecycle: production
   owner: borixcr
   dependsOn:
-    - resource: demo-database
+    - resource: default/demo-database
     - component: demo-service-002
     - api: api-demo-001
   
