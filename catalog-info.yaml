@@ -17,10 +17,7 @@ spec:
   type: service
   lifecycle: production
   owner: borixcr
-  dependsOn:
-    - resource: demo-database
-    - component: demo-service-002
-    - api: api-demo-001
-    
+  system: BKSTG-DEMO
+  dependsOn: ['resource:demo-database', 'component:demo-service-002','api:api-demo-001']
   
   
